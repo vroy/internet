@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+
+require "progressbar"
+
+def draw_bar(name, speed)
+  bar = ProgressBar.new(name, 100000)
+
+  100000.times do
+    sleep(speed)
+    
+    # Use random increments to have variable speed.
+    bar.inc( rand(5) )
+  end
+
+  bar.finish
+end
+
+# Main:
+speed = case ARGV.first
+        when "--hacker" then 0.0001
+        when "--fast"   then 0.005
+        else 
+          1.0
+        end
+
+puts "Downloading and Installing the Internet"
+puts "="*100
+puts
+
+draw_bar("Downloading", speed)
+draw_bar("Extracting", speed)
+draw_bar("Installing", speed)
