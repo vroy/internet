@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'internet'
-  s.version     = '0.1.0'
+  s.version     = '0.1.2'
   s.summary     = "Download and installs the internet on your computer."
   s.description = s.summary
   s.authors     = ["Vincent Roy"]
